@@ -5,7 +5,7 @@ app = Flask(__name__)
 baskets = [{
   'ID': 1,
   'title': 'Low Volatility',
-  'benchmark': 'BSE 100',
+  'benchmark': 'BSE 200',
   'Methodology': 'Volatility based weighting',
   'No of constituents': '30'
 },
