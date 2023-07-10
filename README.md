@@ -1,2 +1,2 @@
-# jovian_flask_practice
-A practice project for creating a careers website using Flask 
+# PortfolioSense version 1 
+Version 1 of PortfolioSense created using Flask, HTML and CSS 
