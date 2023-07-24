@@ -11,13 +11,19 @@
    <div class="container">
      
     <h1 class="text-center mt-2 mb-4">PortfolioSense</h1>
-      
+   
     
     <!--<h2 class="text-center mt-2 mb-4">About PortfolioSense</h2>-->
      
     <p class="lead">Welcome to PortfolioSense – Your Trusted Stock Portfolio Analysis and Model Portfolios Platform. Gain deeper insights into your equity investments with our cutting-edge tools that analyze market capitalization, sectoral allocation, and factor attribution. Make informed investment decisions based on robust analytics and optimize your portfolio for better risk-adjusted returns. Discover curated model portfolios designed by our team of experts, offering you a range of well-structured investment strategies tailored to your financial objectives. Take control of your investments and unlock the potential of your portfolio with PortfolioSense.</p>
+     <div class="d-grid gap-2 col-6 mx-auto">
+     <a href = "/sense" type="button" class="btn btn-primary">Sense</a>
+   
+   </div>
     
-    <h3 class="text-center mt-2 mb-4">Model Portfolios</h3>
+     
+     
+     <h3 class="text-center mt-2 mb-4">Curated Model Portfolios</h3>
     <div>
       {% for portfolio in portfolios %}
        {% include 'baskets.html' %}

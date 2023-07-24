@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Portfolio Input</title>
+    {% include 'bootstrap.html' %}
+</head>
+<body>
+  <div class="container">
+    {% include 'nav.html' %}
+      <h4>Sense</h4>
+      <h5>Stock Portfolio Input</h5>
+      <form method="POST" action="/process">
+          <div>
+            <label for="stock_names">Stock Names (comma-separated):</label>
+            <input type="text" name="stock_names" id="stock_names"><br>
+          </div>
+          <div>
+            
+          <label for="weights">Weights (comma-separated):</label>
+          <input type="text" name="weights" id="weights"><br>
+          </div>
+          <div><input type="submit" value="Submit"></div>
+      </form>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

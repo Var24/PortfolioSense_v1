@@ -1,6 +1,6 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, request
 from database import load_baskets_from_db, load_basket_from_db
-
+import pandas as pd
 
 app = Flask(__name__)
      
@@ -21,6 +21,26 @@ def show_basket(ID):
   if not basket:
     return "Not Found",404
   return render_template("basketpage.html",basket=basket)
+
+@app.route("/sense")
+def index():
+  return render_template("form.html")
+
+@app.route('/process', methods=['POST'])
+def process():
+    stock_names = request.form['stock_names']
+    weights = request.form['weights']
+
+    # Convert input strings into lists
+    stock_names = stock_names.split(',')
+    weights = weights.split(',')
+
+    # Create a DataFrame from the user inputs
+    data = {'Stock Name': stock_names, 'Weight': weights}
+    df = pd.DataFrame(data)
+
+    return df.to_html()
+
   
 
 
