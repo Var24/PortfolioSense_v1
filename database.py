@@ -23,3 +23,18 @@ def load_baskets_from_db():
 
   return baskets
 
+def load_basket_from_db(ID):
+  with engine.connect() as conn:
+    
+    result = conn.execute(text(f"SELECT * FROM baskets where ID = {ID}"))
+    
+    rows=[]
+    for row in result.all():
+      rows.append(row._asdict())
+      if len(rows)==0:
+        return None
+       
+      else:
+        return rows[0]
+        
+  

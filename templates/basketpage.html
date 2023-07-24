@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{basket.title}} - PortfolioSense</title>
+  {% include 'bootstrap.html' %}
+  <body>
+    {% include 'nav.html' %}
+    {% include 'banner.html' %}
+    <div class = "container">
+      <h3>Basket Name</h3>
+      <p>{{basket.title}}</p>
+      <h3>Benchmark Index</h3>
+      <p>{{basket.benchmark}}</p>
+      <h3>Methodology</h3>
+      <p>{{basket.Methodology}}</p>
+      <h3>Number of Constituents</h3>
+      <p>{{basket.No_of_Constituents}}</p>
+      <h3>Basket Description</h3>
+      <p>{{basket.Baskets_Description}}</p>
+    </div>
+     {% include 'footer.html' %}
+  </body>
+
+
+  
+</head>
+</html>
